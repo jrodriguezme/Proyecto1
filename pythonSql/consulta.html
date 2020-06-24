@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<script src="consulta.js"></script>
+<title>Consultas a la base de datos</title>
+</head>
+<body>
+    <fieldset>
+    <legend>Búsqueda en base de datos por:</legend>
+    <select name="kind">
+      <option value="Actor"> Nombre del Actor <br>
+      <option value="ActorID">ID del Actor <br>
+      <option value="Movie"> Nombre de la Pelicula <br>
+      <option value="MovieID"> ID de la Pelicula <br>
+      <option value="Año"> Mostrar Pelicula por año<br>
+      <option value="Rank"> Rank de las peliculas <br>
+      <option value="Casting"> Nombre de la Pelicula <br>  
+    </select>
+    <input type="text" name="keyword"><br>
+    <button onclick="query(document.getElementsByName('kind')[0].value,document.getElementsByName('keyword')[0].value)">
+    Consultar
+    </button>
+    </fieldset>
+  <div id="demo"></div> 
+</body>
+</html>
